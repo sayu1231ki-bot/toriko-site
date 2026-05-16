@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小料理 とりこ</title>
+  <meta name="description" content="実を結び、縁を編む。魚河岸から仕入れる旬の魚介と季節の恵みを、一皿一皿丁寧に。小料理 とりこ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================================================
+       0. 固定ナビゲーション
+       ================================================ -->
+  <nav class="nav" id="nav" aria-label="メインナビゲーション">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top">小料理 とりこ</a>
+      <button class="nav__hamburger" id="navHamburger"
+              aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__list" id="navList">
+        <li><a class="nav__link" href="#concept">とりこについて</a></li>
+        <li><a class="nav__link" href="#members">メンバー紹介</a></li>
+        <li><a class="nav__link" href="#menu">お品書き</a></li>
+        <li><a class="nav__link" href="#gallery">旬の手仕事</a></li>
+        <li><a class="nav__link" href="#event">ご案内</a></li>
+        <li><a class="nav__link" href="https://www.instagram.com/koryouri_toriko/"
+               target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       1. ヒーロー — 左右の枝が中央で重なり開く→ロゴ
+       ================================================ -->
+  <section class="hero" id="top">
+
+    <!-- 花びら -->
+    <div class="petals" aria-hidden="true">
+      <svg class="petal petal--1" viewBox="0 0 30 36"><path d="M15 2C19 6,24 12,22 20C20 26,17 30,15 32C13 30,10 26,8 20C6 12,11 6,15 2Z" fill="#E8A0A0"/></svg>
+      <svg class="petal petal--2" viewBox="0 0 30 36"><path d="M15 2C19 6,24 12,22 20C20 26,17 30,15 32C13 30,10 26,8 20C6 12,11 6,15 2Z" fill="#F2C4C4"/></svg>
+      <svg class="petal petal--3" viewBox="0 0 28 34"><path d="M14 2C18 6,22 11,20 19C18 25,15 29,14 31C13 29,10 25,8 19C6 11,10 6,14 2Z" fill="#E8A0A0"/></svg>
+      <svg class="petal petal--4" viewBox="0 0 26 32"><path d="M13 1C17 5,20 10,18 17C17 22,14 26,13 28C12 26,9 22,8 17C6 10,9 5,13 1Z" fill="#F2C4C4"/></svg>
+      <svg class="petal petal--5" viewBox="0 0 30 36"><path d="M15 2C19 6,24 12,22 20C20 26,17 30,15 32C13 30,10 26,8 20C6 12,11 6,15 2Z" fill="#E8A0A0"/></svg>
+      <svg class="petal petal--6" viewBox="0 0 22 28"><path d="M11 1C14 4,17 9,15 15C14 19,12 22,11 24C10 22,8 19,7 15C5 9,8 4,11 1Z" fill="#F2C4C4"/></svg>
+      <svg class="petal petal--7" viewBox="0 0 24 30"><path d="M12 1C16 5,19 10,17 17C16 21,14 24,12 26C10 24,8 21,7 17C5 10,8 5,12 1Z" fill="#E8A0A0"/></svg>
+    </div>
+
+    <!-- 桜：左右パネルがそれぞれ開く。まず右、続いて左 -->
+    <div class="hero__veil" id="heroVeil" aria-hidden="true">
+      <div class="hero__half hero__half--left">
+        <img src="images/hero-tree-layer-front.png" alt="" class="hero__veil-img">
+      </div>
+      <div class="hero__half hero__half--right">
+        <img src="images/hero-tree-layer-back.png" alt="" class="hero__veil-img">
+      </div>
+    </div>
+
+    <!-- ロゴとコピー -->
+    <div class="hero__content" id="heroContent">
+      <div class="hero__logo-wrap">
+        <img src="images/logo.png" alt="小料理 とりこ ロゴ" class="hero__logo">
+      </div>
+      <p class="hero__copy"><span class="hero__copy-line">実を結び</span><br><span class="hero__copy-line">縁を編む</span></p>
+    </div>
+
+    <div class="hero__scroll" id="heroScroll" aria-hidden="true">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-text">scroll</span>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ================================================
+         2. コンセプト（bg-deep）
+         ================================================ -->
+    <section class="section bg-deep" id="concept">
+      <div class="container">
+        <p class="section-label reveal">CONCEPT</p>
+        <h2 class="section-heading reveal">とりこについて</h2>
+      </div>
+
+      <div class="container concept__grid">
+        <div class="concept__col reveal">
+          <div class="concept__poem">
+            <p>桃や李は、何も語らない。</p>
+            <p>けれど、美しい花を咲かせ、</p>
+            <p>おいしい実をつければ、</p>
+            <p>自然と人が集まり、小道ができる。</p>
+            <p class="concept__poem-gap">&emsp;</p>
+            <p>おいしい料理と、温かい空間。</p>
+            <p>それだけで、人は自然と集い、</p>
+            <p>縁が生まれ、つながっていく。</p>
+            <p>小料理 とりこは、</p>
+            <p>そんな&#8220;小道&#8221;でありたい。</p>
+          </div>
+        </div>
+        <div class="concept__col reveal">
+          <p class="concept__quote">「桃李不言　下自成蹊」</p>
+        </div>
+      </div>
+
+      <div class="concept__band reveal">
+        <img src="images/dish-uni.png"
+             alt="雲丹・蛸・明太子の前菜盛り。黒い石皿に紫の花あしらい"
+             class="concept__band-img" loading="lazy">
+        <div class="concept__band-overlay" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         3. フルブリード写真帯（bg-primary）
+         ================================================ -->
+    <div class="photo-band">
+      <img src="images/dish-maguro.png"
+           alt="本マグロの舟盛り。赤身・中トロ・大トロ"
+           class="photo-band__img" loading="lazy">
+    </div>
+
+    <!-- ================================================
+         4. メンバー紹介（bg-subtle）
+         ================================================ -->
+    <section class="section bg-subtle" id="members">
+      <div class="container">
+        <p class="section-label reveal">MEMBERS</p>
+        <h2 class="section-heading reveal">メンバー紹介</h2>
+
+        <div class="members__layout">
+          <div class="members__img-wrap reveal">
+            <img src="images/staff-three.png"
+                 alt="女将と料理人ふたり。口元から下のみ"
+                 class="members__img" loading="lazy">
+          </div>
+
+          <div class="members__text reveal">
+            <div class="members__poem">
+              <p>二十四歳の若女将のもとに、</p>
+              <p>飲食歴十五年の熟練の料理人がふたり。</p>
+              <p class="members__dash">—</p>
+              <p>毎朝、魚河岸に通い、</p>
+              <p>旬を見極め、一皿に仕立てる。</p>
+              <p>確かな技と、若い情熱が交わる厨房から、</p>
+              <p>季節の一品をお届けします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         5. お品書き（bg-primary）
+         ================================================ -->
+    <section class="section bg-primary" id="menu">
+      <div class="container">
+        <p class="section-label reveal">MENU</p>
+        <h2 class="section-heading reveal">お品書き</h2>
+
+        <div class="menu__img-wrap reveal">
+          <img src="images/menu-new.png"
+               alt="手描き風お品書き。前菜・お造り・温菜・肉料理・揚げ物・甘味と金額"
+               class="menu__img" loading="lazy">
+        </div>
+
+        <p class="menu__note reveal">※季節や仕入れにより内容が変わります</p>
+
+        <div class="menu__scroll reveal" aria-label="お品書き一覧">
+          <div class="menu__category">
+            <h3 class="menu__cat-title">前菜</h3>
+            <ul class="menu__items">
+              <li>新ごぼうの木の芽胡麻酢和え　<span class="menu__price">680円</span></li>
+              <li>フルーツトマト 自家製新玉ねぎドレッシング掛け　<span class="menu__price">780円</span></li>
+              <li>蟹味噌のとりこポテサラ　<span class="menu__price">780円</span></li>
+            </ul>
+          </div>
+          <div class="menu__category">
+            <h3 class="menu__cat-title">お造り</h3>
+            <ul class="menu__items">
+              <li>銚子産 入梅鰯 梅たたき　<span class="menu__price">980円</span></li>
+              <li>梅雨伊佐木 焼き霜造り　<span class="menu__price">980円</span></li>
+              <li>黄金アジなめろう　<span class="menu__price">1,280円</span></li>
+              <li>熟成瞬〆スズキ 昆布締め　<span class="menu__price">1,180円</span></li>
+              <li>刺身盛り合わせ＋日本酒ペアリング　<span class="menu__price">3,000円</span></li>
+              <li>他、仕入れ状況により<br>厳選鮮魚刺身をご用意</li>
+            </ul>
+          </div>
+          <div class="menu__category">
+            <h3 class="menu__cat-title">温菜</h3>
+            <ul class="menu__items">
+              <li>とりこの出汁巻き玉子<br>桜海老餡掛け　<span class="menu__price">880円</span></li>
+              <li>あごつみれ碗　<span class="menu__price">980円</span></li>
+            </ul>
+          </div>
+          <div class="menu__category">
+            <h3 class="menu__cat-title">肉料理</h3>
+            <ul class="menu__items">
+              <li>女将の自慢の<br>新じゃがと豚塩角煮　<span class="menu__price">980円</span></li>
+            </ul>
+          </div>
+          <div class="menu__category">
+            <h3 class="menu__cat-title">揚げ物</h3>
+            <ul class="menu__items">
+              <li>魚河岸のいわしフライ　<span class="menu__price">880円</span></li>
+              <li>魚河岸のアジフライ　<span class="menu__price">1,200円</span></li>
+            </ul>
+          </div>
+          <div class="menu__category">
+            <h3 class="menu__cat-title">甘味</h3>
+            <ul class="menu__items">
+              <li>とりこプリン<br>日本酒カラメルソース　<span class="menu__price">680円</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="menu__foot-note reveal">※当日仕入れ状況によりメニュー変更の場合あり</p>
+      </div>
+    </section>
+
+    <!-- ================================================
+         6. 旬の手仕事（bg-deep）
+         ================================================ -->
+    <section class="section bg-deep" id="gallery">
+      <div class="container">
+        <p class="section-label reveal">GALLERY</p>
+        <h2 class="section-heading reveal">旬の手仕事</h2>
+      </div>
+
+      <div class="gallery__row reveal">
+        <figure class="gallery__item">
+          <img src="images/dish-sashimi.png" alt="鯛の薄造り" class="gallery__img" loading="lazy">
+          <div class="gallery__overlay" aria-hidden="true"></div>
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/dish-uni.png" alt="旬菜の盛り合わせ" class="gallery__img" loading="lazy">
+          <div class="gallery__overlay" aria-hidden="true"></div>
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/dish-sushi.png" alt="握りと太巻き" class="gallery__img" loading="lazy">
+          <div class="gallery__overlay" aria-hidden="true"></div>
+        </figure>
+      </div>
+
+      <div class="gallery__full reveal">
+        <figure class="gallery__item gallery__item--full">
+          <img src="images/dish-rice.png" alt="炊きたての酢飯" class="gallery__img" loading="lazy">
+          <div class="gallery__overlay" aria-hidden="true"></div>
+        </figure>
+      </div>
+
+      <div class="gallery__row reveal">
+        <figure class="gallery__item">
+          <img src="images/dish-tamago.png" alt="出汁巻き玉子" class="gallery__img" loading="lazy">
+          <div class="gallery__overlay" aria-hidden="true"></div>
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/dish-tonjiru.png" alt="具沢山の豚汁" class="gallery__img" loading="lazy">
+          <div class="gallery__overlay" aria-hidden="true"></div>
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/dish-maguro.png" alt="本マグロの舟盛り" class="gallery__img" loading="lazy">
+          <div class="gallery__overlay" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================================================
+         7. ご案内（bg-subtle）
+         ================================================ -->
+    <section class="section bg-subtle" id="event">
+      <div class="container">
+        <p class="section-label reveal">EVENT</p>
+        <h2 class="section-heading reveal">ご案内</h2>
+
+        <div class="event__card reveal">
+          <!-- 角飾り -->
+          <span class="event__corner event__corner--tl" aria-hidden="true">
+            <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 1C11 3.5,12 7,9 10C6 7,7 3.5,9 1Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M16 5C13 7.5,9 7,9 10C11 11,14.5 9.5,16 5Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M14 16C12 13.5,9 7,9 10C8 12,10 14,14 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M4 16C6 13.5,9 7,9 10C10 12,8 14,4 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M2 5C5 7.5,9 7,9 10C7 11,3.5 9.5,2 5Z" fill="#E8A0A0" opacity=".6"/>
+            </svg>
+          </span>
+          <span class="event__corner event__corner--tr" aria-hidden="true">
+            <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 1C11 3.5,12 7,9 10C6 7,7 3.5,9 1Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M16 5C13 7.5,9 7,9 10C11 11,14.5 9.5,16 5Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M14 16C12 13.5,9 7,9 10C8 12,10 14,14 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M4 16C6 13.5,9 7,9 10C10 12,8 14,4 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M2 5C5 7.5,9 7,9 10C7 11,3.5 9.5,2 5Z" fill="#E8A0A0" opacity=".6"/>
+            </svg>
+          </span>
+          <span class="event__corner event__corner--bl" aria-hidden="true">
+            <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 1C11 3.5,12 7,9 10C6 7,7 3.5,9 1Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M16 5C13 7.5,9 7,9 10C11 11,14.5 9.5,16 5Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M14 16C12 13.5,9 7,9 10C8 12,10 14,14 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M4 16C6 13.5,9 7,9 10C10 12,8 14,4 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M2 5C5 7.5,9 7,9 10C7 11,3.5 9.5,2 5Z" fill="#E8A0A0" opacity=".6"/>
+            </svg>
+          </span>
+          <span class="event__corner event__corner--br" aria-hidden="true">
+            <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 1C11 3.5,12 7,9 10C6 7,7 3.5,9 1Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M16 5C13 7.5,9 7,9 10C11 11,14.5 9.5,16 5Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M14 16C12 13.5,9 7,9 10C8 12,10 14,14 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M4 16C6 13.5,9 7,9 10C10 12,8 14,4 16Z" fill="#E8A0A0" opacity=".6"/>
+              <path d="M2 5C5 7.5,9 7,9 10C7 11,3.5 9.5,2 5Z" fill="#E8A0A0" opacity=".6"/>
+            </svg>
+          </span>
+
+          <p class="event__eyebrow">第1回イベント</p>
+          <h3 class="event__title">小料理 とりこ<br>第1回イベント</h3>
+
+          <dl class="event__info">
+            <div class="event__row">
+              <dt>日時</dt>
+              <dd>2026年5月29日（木）19:00 〜 23:00</dd>
+            </div>
+            <div class="event__row">
+              <dt>会場</dt>
+              <dd>
+                frame 恵比寿
+                <a href="https://maps.app.goo.gl/dAGDN5dAKK8gxXyv9?g_st=ic"
+                   target="_blank" rel="noopener noreferrer"
+                   class="event__map-link">会場までのアクセス →</a>
+              </dd>
+            </div>
+            <div class="event__row">
+              <dt>参加費</dt>
+              <dd>
+                ¥5,000（飲み放題付き）<br>
+                <span class="event__sub">※お料理は別途ご注文いただけます</span>
+              </dd>
+            </div>
+          </dl>
+
+          <p class="event__note">ご予約・詳細はInstagramをご確認ください</p>
+          <a href="https://www.instagram.com/koryouri_toriko/"
+             target="_blank" rel="noopener noreferrer"
+             class="btn"
+             aria-label="Instagram @koryouri_toriko（外部リンク）">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            @koryouri_toriko
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         8. Instagram（bg-primary）
+         ================================================ -->
+    <section class="section bg-primary" id="instagram">
+      <div class="container">
+        <p class="section-label reveal">DAILY</p>
+        <h2 class="section-heading reveal">日々のこと</h2>
+        <p class="insta__text reveal">日々の仕入れや料理の様子は Instagramで。</p>
+        <div class="insta__btn-wrap reveal">
+          <a href="https://www.instagram.com/koryouri_toriko/"
+             target="_blank" rel="noopener noreferrer"
+             class="btn"
+             aria-label="小料理とりこのInstagramを見る（外部リンク）">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            <span>@koryouri_toriko</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       9. フッター（bg-primary）
+       ================================================ -->
+  <footer class="footer">
+    <div class="footer__rule" aria-hidden="true"></div>
+    <div class="footer__inner">
+      <img src="images/logo.png" alt="小料理 とりこ ロゴ" class="footer__logo" loading="lazy">
+      <p class="footer__name">小料理 とりこ</p>
+      <p class="footer__insta">
+        <a href="https://www.instagram.com/koryouri_toriko/"
+           target="_blank" rel="noopener noreferrer">
+          Instagram: @koryouri_toriko
+        </a>
+      </p>
+      <p class="footer__copy">&copy; 2026 小料理 とりこ</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
