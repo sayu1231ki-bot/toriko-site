@@ -203,63 +203,60 @@ ul  { list-style: none; }
   justify-content: center;
 }
 
-/* Hero veil — 左右パネルが左右へ開く。まず右、続いて左 */
+/* Hero veil — 2枚をフルスクリーンで重ね、右が右へ・左が左へスライドして開く */
 .hero__veil {
   position: absolute;
   inset: 0;
   z-index: 10;
   pointer-events: none;
-  display: flex;
 }
 
-.hero__half {
-  flex: 0 0 50%;
-  position: relative;
-  overflow: hidden;
+/* 各レイヤー：フルスクリーン固定 */
+.hero__layer {
+  position: absolute;
+  inset: 0;
   background-color: var(--color-bg-primary);
+  overflow: hidden;
   will-change: transform;
-  transition: transform 2.6s cubic-bezier(0.22, 0.94, 0.28, 1);
+  transition: transform 2.8s cubic-bezier(0.22, 0.94, 0.28, 1);
 }
 
-.hero__half--left  { order: 1; }
-.hero__half--right { order: 2; }
+/* 右桜（back.png）が上、左桜（front.png）が下 */
+.hero__layer--left  { z-index: 11; }
+.hero__layer--right { z-index: 12; }
 
-/* 各パネルの桜画像：下端基準で配置 */
+/* 桜画像：フルスクリーンを完全に覆う */
 .hero__veil-img {
   position: absolute;
-  bottom: 0;
-  width: 100vw;
-  max-width: none;
-  height: 130vh;
-  object-fit: contain;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
   opacity: 0;
+  transform: scale(1.35);
   transition:
-    transform 0.9s cubic-bezier(0.2, 0.9, 0.2, 1),
-    opacity 0.78s ease-out;
+    transform 0.95s cubic-bezier(0.2, 0.9, 0.2, 1),
+    opacity 0.82s ease-out;
 }
 
-/* 左パネル：左下基準、枝が中央へ延びる */
-.hero__half--left .hero__veil-img {
-  left: 0;
-  object-position: 0% 100%;
-  transform: scale(1.42);
-  transform-origin: 8% 100%;
+/* 左桜（front.png）：幹が左下、枝が右へ → 左下基準でカバー */
+.hero__layer--left .hero__veil-img {
+  object-position: left bottom;
+  transform-origin: 15% 90%;
 }
 
-/* 右パネル：右下基準、枝が中央へ延びる */
-.hero__half--right .hero__veil-img {
-  right: 0;
-  object-position: 100% 100%;
-  transform: scale(1.42);
-  transform-origin: 92% 100%;
+/* 右桜（back.png）：幹が右下、枝が左へ → 右下基準でカバー */
+.hero__layer--right .hero__veil-img {
+  object-position: right bottom;
+  transform-origin: 85% 90%;
 }
 
-/* 登場：まず右、続いて左 */
-.hero.is-intro:not(.is-open) .hero__half--right .hero__veil-img {
+/* 登場：まず右、続いて左（0.42s遅延） */
+.hero.is-intro:not(.is-open) .hero__layer--right .hero__veil-img {
   transition-delay: 0s;
 }
-.hero.is-intro:not(.is-open) .hero__half--left .hero__veil-img {
+.hero.is-intro:not(.is-open) .hero__layer--left .hero__veil-img {
   transition-delay: 0.42s;
 }
 
@@ -268,14 +265,14 @@ ul  { list-style: none; }
   opacity: 1;
 }
 
-/* 開く：右パネルが右へ、続いて左パネルが左へ */
-.hero.is-open .hero__half--right {
+/* 開く：右が右へスライド → 0.75s後に左が左へスライド */
+.hero.is-open .hero__layer--right {
   transform: translateX(100%);
   transition-delay: 0s;
 }
-.hero.is-open .hero__half--left {
+.hero.is-open .hero__layer--left {
   transform: translateX(-100%);
-  transition-delay: 0.72s;
+  transition-delay: 0.75s;
 }
 
 .hero.hero--veil-done .hero__veil {
