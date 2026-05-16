@@ -225,6 +225,25 @@ ul  { list-style: none; }
 .hero__layer--left  { z-index: 11; }
 .hero__layer--right { z-index: 12; }
 
+/* 枝先フェード：上端・外側の端をなめらかに消す */
+.hero__layer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.hero__layer--left::after {
+  background:
+    linear-gradient(to bottom, var(--color-bg-primary) 0%, transparent 22%),
+    linear-gradient(to right, transparent 72%, var(--color-bg-primary) 100%);
+}
+.hero__layer--right::after {
+  background:
+    linear-gradient(to bottom, var(--color-bg-primary) 0%, transparent 22%),
+    linear-gradient(to left, transparent 72%, var(--color-bg-primary) 100%);
+}
+
 /* 桜画像：フルスクリーンを完全に覆う */
 .hero__veil-img {
   position: absolute;
@@ -417,27 +436,20 @@ ul  { list-style: none; }
 .concept__poem-gap { margin-inline-end: 0.6em; color: transparent; }
 
 .concept__quote {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+  display: block;
+  text-align: center;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
   font-weight: 400;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.55em;
+  padding-right: 0.55em;
   color: var(--color-gold);
-  height: clamp(160px, 36vh, 300px);
-  line-height: 1.8;
-  white-space: nowrap;
+  line-height: 2;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 @media (max-width: 600px) {
   .concept__grid {
     grid-template-columns: 1fr;
-  }
-  .concept__quote {
-    height: auto;
-    writing-mode: horizontal-tb;
-    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
-    line-height: 1.9;
-    letter-spacing: 0.1em;
   }
 }
 
